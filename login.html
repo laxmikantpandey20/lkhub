@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Login - lkHub</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+<div class="logo">
+
+<img src="logo.png">
+
+<span>lkHub</span>
+
+</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="hub.html">Hub</a></li>
+
+<li><a href="contact.html">Contact Us</a></li>
+
+<li><a href="login.html">Login / Signup</a></li>
+
+</ul>
+
+</nav>
+
+<!-- Login Box -->
+
+<section style="text-align:center;margin-top:100px;">
+
+<h2>Admin Login</h2>
+
+<br>
+
+<input type="email"
+id="email"
+placeholder="Enter Email"
+style="padding:10px;width:250px;">
+
+<br><br>
+
+<input type="password"
+id="password"
+placeholder="Enter Password"
+style="padding:10px;width:250px;">
+
+<br><br>
+
+<button onclick="checkLogin()"
+class="btn">
+
+Login
+
+</button>
+
+</section>
+
+<script>
+
+function checkLogin(){
+
+let email=document.getElementById("email").value;
+
+let password=document.getElementById("password").value;
+
+if(
+
+email==="laxmikantpandeychhotupandey@gmail.com"
+
+&&
+
+password==="lkhublaxmikant9262"
+
+){
+
+window.location.href="admin.html";
+
+}
+
+else{
+
+alert("Wrong Email or Password");
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
