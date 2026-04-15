@@ -197,3 +197,24 @@ margin-bottom:10px;
 color:#0a0f2c;
 
 }
+/* Admin Inputs */
+
+input, textarea{
+
+padding:10px;
+
+width:250px;
+
+margin:5px;
+
+border-radius:5px;
+
+border:1px solid #ccc;
+
+}
+
+textarea{
+
+height:80px;
+
+}
