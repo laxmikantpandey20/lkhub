@@ -130,3 +130,60 @@ alert("All Products Deleted");
 location.reload();
 
 }
+// Search Products
+
+function searchProducts(){
+
+let input =
+document.getElementById("searchInput").value.toLowerCase();
+
+let products =
+JSON.parse(localStorage.getItem("products")) || [];
+
+let container =
+document.getElementById("productContainer");
+
+container.innerHTML="";
+
+products.forEach((product,index)=>{
+
+if(product.title.toLowerCase().includes(input)){
+
+let imagesHTML="";
+
+product.images.forEach(img=>{
+
+imagesHTML += `
+<img src="${img}" width="100" style="margin:5px;">
+`;
+
+});
+
+container.innerHTML += `
+
+<div class="product">
+
+<div>
+${imagesHTML}
+</div>
+
+<h3>${product.title}</h3>
+
+<p>${product.description}</p>
+
+<h4>₹ ${product.price}</h4>
+
+<button onclick="deleteSingle(${index})"
+style="margin-top:10px;padding:8px;">
+Delete
+</button>
+
+</div>
+
+`;
+
+}
+
+});
+
+}
